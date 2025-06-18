@@ -3,7 +3,6 @@
 ###
 A complete frontend-based eCommerce system with essential features like login/register, cart management, product handling, and user profile settings. Supports RTL layout and dynamic interactions using vanilla JavaScript.
 ###
-###
 <h2 align="left">💻 Tech Stack</h2>
 ###
 <div align="left">
