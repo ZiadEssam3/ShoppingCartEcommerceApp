@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    background: #333;
+    padding: 10px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content .brand {
+    font-size: 32px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    /*parent is ul*/
+    list-style: none;
+}
+
+nav ul#user_info {
+    display: none;
+    align-items: center;
+}
+
+nav ul#user_info li i {
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+nav ul#user_info li {
+    position: relative;
+    margin: 0 7px;
+}
+
+nav ul#user_info li .badge {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    color: #fff;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    top: -10px;
+    right: -10px;
+    font-size: 10px;
+    line-height: 20px;
+    display: none;
+}
+
+/******Search*****/
+#search {
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #b5b5b5;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+
+}
+
+/****** Cart *****/
+nav ul#user_info .carts-products {
+    position: absolute;
+    transform: translate(-42%, 0);
+    width: 200px;
+    background: rgb(188, 188, 188);
+    left: -40%;
+    top: 46px;
+    padding: 10px;
+    border: 1px solid #e8e8e8;
+    display: none;
+}
+
+nav ul#user_info .carts-products a {
+    display: block;
+    color: #000;
+    margin: 0;
+    padding: 10px;
+    background: darkgreen;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+nav li a {
+    display: block;
+    color: #fff;
+    min-width: 50px;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+/****************************** form *********************************/
+
+.section-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    text-align: center;
+    background: #888181;
+    padding: 20px;
+}
+
+.section-form h2 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.section-form form input {
+    font-family: "Oswald", sans-serif;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    outline: 0;
+    border-radius: 10px;
+}
+
+.section-form form input[type=submit] {
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.section-form form input[type=submit]:hover {
+    background: black;
+    color: #fff;
+}
+
+/****************************** products *********************************/
+.products {
+    width: 60%;
+    float: left;
+    margin: 10px 0;
+}
+
+.products-filter {
+    width: 35%;
+    float: right;
+    margin: 10px 0;
+}
+
+.product-item {
+    display: flex;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    min-height: 120px;
+}
+
+.product-item-img {
+    width: 25%;
+    margin-right: 10px;
+}
+
+.product-item-desc a {
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+    color: #333;
+    cursor: pointer;
+}
+
+.product-item-actions {
+    flex: 1px;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.product-item .add-to-cart {
+    display: block;
+    margin-left: auto;
+    background: darkgreen;
+    color: #fff;
+    border: 0;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "Oswald", sans-serif;
+}
+
+.product-item .favourite {
+    cursor: pointer;
+}
+
+/****************************** Cart Details *********************************/
+
+.item-details img {
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #333;
+    padding: 2px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/****************************** Create Product *********************************/
+.create-product-icon {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: #dd1263;
+    text-decoration: none;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    transition: opacity 0.8s;
+}
+
+.create-product-icon:hover {
+    opacity: 0.8;
+}
+
+/****************************** Filter Product *********************************/
+
+#size-filter {
+    display: block;
+    width: 100%;
+    height: 40px;
+}
+
+/****************************** Edit Product *********************************/
+
+.edit-product {
+    display: block;
+    width: 140px;
+    border: none;
+    background: #3c067e;
+    padding: 5px 15px;
+    cursor: pointer;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+}
+
+.item-qty {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 15px;
+    font-size: 10px;
+}
+
+/****************************** Profile  *********************************/
+.user-avatar {
+    width: 250px;
+    height: 250px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+/****************************** Edit Profile  *********************************/
+
+#edit-profile-form input {
+    font-family: "Oswald", sans-serif;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    outline: 0;
+    border-radius: 10px;
+}
+
+#edit-profile-form input[type=submit] {
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    border: none;
+    font-family: "Oswald", sans-serif;
+
+}
+
+.dis {
+    display: flex;
+    gap: 10px;
+}
+
+.data {
+    margin: 80px 19px;
+}
+
+.edit-p {
+    text-decoration: none;
+    color: #dd1263;
+    cursor: pointer;
+}
+
+/****************************** Language  *********************************/
+
+#en_lang,
+#ar_lang {
+    color: #fff;
+    cursor: pointer;
+}
